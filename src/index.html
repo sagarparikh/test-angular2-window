@@ -7,6 +7,24 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script>
+    var obj = {};
+    
+    obj.mess = 'This is from the HTML page';
+    obj.init = function(ref){
+      this.ref = ref;
+    }
+    obj.message = function(){
+      return this.mess;
+    }
+    obj.handler = function(){
+      console.log("!@#!@#!@#!@#!@#!@#!@#!@#!@#!@");
+      this.ref.call(null,`${Math.random()*3333} Random string`);
+    }
+  </script>
+
+
 </head>
 <body>
   <app-root>Loading...</app-root>
